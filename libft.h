@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcobaled <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/11 23:37:45 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/11/21 18:08:28 by jcobaled         ###   ########.fr       */
+/*   Created: 2019/11/21 18:18:21 by jcobaled          #+#    #+#             */
+/*   Updated: 2019/11/21 18:30:59 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <string.h>
 
-void	ft_bzero(void *s, size_t n)
-{
-	size_t			i;
-	unsigned char	*str;
+void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_memset(void *b, int c, size_t len);
 
-	str = s;
-	i = 0;
-	while (n > 0)
-	{
-		str[i] = 0;
-		i++;
-		n--;
-	}
-}
+#endif

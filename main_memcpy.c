@@ -6,7 +6,7 @@
 /*   By: jcobaled <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 00:38:19 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/11/12 21:06:03 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/11/21 00:29:36 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		main(void)
 	char src[90]="palacio";
 	size_t n;
 	
-	n = 6;
+	n = 0;
 	printf("%s\n", memcpy(dst, src, n));
 	printf("%s\n", memcpy(dst, src, n));
 	return (0);
