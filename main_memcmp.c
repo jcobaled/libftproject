@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_memset.c                                      :+:      :+:    :+:   */
+/*   main_memcmp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcobaled <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/11 20:49:47 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/11/25 21:40:28 by jcobaled         ###   ########.fr       */
+/*   Created: 2019/11/26 00:00:29 by jcobaled          #+#    #+#             */
+/*   Updated: 2019/11/26 00:38:48 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 int		main(void)
 {
-	int c;
-	size_t len;
-	char b[90] = "AAAAAAA";
-	
-	c = 'a';
-	len = 4;
-	printf("%s\n", memset(b, c, len));
-	printf("%s\n", ft_memset(b, c, len));	
+	char s1[12]="cascanueces";
+	char s2[12]="cascañas";
+	size_t n;
+
+	n = 7;
+	printf("%d\n", memcmp(s1, s2, n));
+	printf("%d\n", ft_memcmp(s1, s2, n));
 	return (0);
 }
-

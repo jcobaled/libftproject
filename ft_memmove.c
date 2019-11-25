@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/21 00:43:48 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/11/25 23:27:23 by jcobaled         ###   ########.fr       */
+/*   Created: 2019/11/25 20:34:37 by jcobaled          #+#    #+#             */
+/*   Updated: 2019/11/25 21:35:46 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t		i;
 	unsigned char	*d;
 	unsigned char	*s;
+	size_t			i;
 
 	d = (unsigned char*)dst;
 	s = (unsigned char*)src;
 	i = 0;
-	while (i < n)
+	if (dst < src)
+		memcpy(dst, src, len);
+	while (len > 0)
 	{
 		d[i] = s[i];
-		if (d[i] == (unsigned char)c)
-			return (d + 1);
-		++i;
+		i++;
+		len--;
 	}
-	return (NULL);
+	return (d);
 }

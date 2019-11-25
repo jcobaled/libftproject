@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_memset.c                                      :+:      :+:    :+:   */
+/*   main_memmove.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcobaled <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/11 20:49:47 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/11/25 21:40:28 by jcobaled         ###   ########.fr       */
+/*   Created: 2019/11/25 21:00:44 by jcobaled          #+#    #+#             */
+/*   Updated: 2019/11/25 21:35:40 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memmove(void *std, const void *src, size_t len);
 
 int		main(void)
 {
-	int c;
-	size_t len;
-	char b[90] = "AAAAAAA";
-	
-	c = 'a';
-	len = 4;
-	printf("%s\n", memset(b, c, len));
-	printf("%s\n", ft_memset(b, c, len));	
-	return (0);
-}
+char dst[5]="campo";
+char src[10]="condominio";
+size_t len;
 
+len = 4;
+printf("%s\n", memmove(dst, src, len));
+printf("%s\n", ft_memmove(dst, src, len));
+return (0);
+}
