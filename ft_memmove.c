@@ -6,7 +6,7 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/25 20:34:37 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/11/25 21:35:46 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/11/30 23:40:31 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,21 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	d = (unsigned char*)dst;
 	s = (unsigned char*)src;
 	i = 0;
-	if (dst < src)
-		memcpy(dst, src, len);
-	while (len > 0)
+	if (len == 0 || src == dst)
+		return (dst);
+	if (src < dst)
 	{
-		d[i] = s[i];
-		i++;
-		len--;
+		while (++i <= len)
+		{
+			d[len - i] = s[len - i];
+		}
 	}
-	return (d);
+	else
+	{
+		while (--len > 0)
+		{
+			d[i] = s[i];
+		}
+	}
+	return (dst);
 }

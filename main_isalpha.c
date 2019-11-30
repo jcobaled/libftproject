@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main_isalpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/26 00:40:22 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/11/30 13:43:02 by jcobaled         ###   ########.fr       */
+/*   Created: 2019/11/30 13:55:54 by jcobaled          #+#    #+#             */
+/*   Updated: 2019/11/30 14:59:19 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
-size_t	ft_strlen(const char *s)
+int		ft_isalpha(int c);
+
+int		main(void)
 {
-	size_t	len;
-	
-	len = 0;
-	while (s[len] !='\0')
-		len++;
-	return (len);
+	int	c;
+
+	c = 93;
+	printf("%d\t %d\n", isalpha(c), ft_isalpha(c));
+	return (0);
 }

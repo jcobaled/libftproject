@@ -6,7 +6,7 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 00:43:48 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/11/25 23:27:23 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/11/30 19:49:12 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
 	{
 		d[i] = s[i];
 		if (d[i] == (unsigned char)c)
-			return (d + 1);
+			return (d + i + 1);
 		++i;
 	}
 	return (NULL);

@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main_isdigit.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/26 00:40:22 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/11/30 13:43:02 by jcobaled         ###   ########.fr       */
+/*   Created: 2019/11/30 14:23:32 by jcobaled          #+#    #+#             */
+/*   Updated: 2019/11/30 14:37:30 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <ctype.h>
+#include <stdio.h>
 
-size_t	ft_strlen(const char *s)
+int		ft_isdigit(int c);
+
+int		main(void)
 {
-	size_t	len;
-	
-	len = 0;
-	while (s[len] !='\0')
-		len++;
-	return (len);
+	int	c;
+
+	c = 7;
+	printf("%d\t%d\n", isdigit(c), ft_isdigit(c));
+	return (0);
 }
