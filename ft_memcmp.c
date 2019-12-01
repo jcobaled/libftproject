@@ -6,7 +6,7 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 00:00:11 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/11/26 00:38:46 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/12/01 09:23:59 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (str1[i] == str2[i] && i < n)
+	while (i < n)
 	{
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	return ((str1[i] - str2[i]));
+	return (0);
 }

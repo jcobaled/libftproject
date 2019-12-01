@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main_strchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/26 00:40:22 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/01 12:21:06 by jcobaled         ###   ########.fr       */
+/*   Created: 2019/12/01 11:14:06 by jcobaled          #+#    #+#             */
+/*   Updated: 2019/12/01 15:08:04 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-size_t	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, int c);
+
+int		main(void)
 {
-	size_t	len;
+	char s[15]="icadenaº";
+	int c = 'n';
 	
-	len = 0;
-	while (s[len] !='\0')
-		len++;
-	return (len);
+	printf("%s\t%s\n", strchr(s, c), ft_strrchr(s, c));
+	return (0);
 }
