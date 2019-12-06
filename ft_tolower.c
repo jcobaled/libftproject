@@ -6,14 +6,14 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/01 10:29:22 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/01 10:33:27 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/12/06 13:12:32 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int		ft_tolower(int c)
-{	
+{
 	if ('A' <= c && c <= 'Z')
 		return (c + 32);
 	else

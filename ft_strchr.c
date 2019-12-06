@@ -6,14 +6,14 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/01 10:36:03 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/01 13:47:46 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/12/06 13:10:16 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
-{ 
+{
 	char	*str;
 	int		i;
 
@@ -27,14 +27,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (str + i);
 }
-	
-	
-
-/*	while (*str != c)
-	{
-		if (*str == '\0')
-			return (NULL);
-		str++;
-	}
-	return (str);
-}*/

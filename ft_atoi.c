@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/25 20:34:37 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/06 13:03:19 by jcobaled         ###   ########.fr       */
+/*   Created: 2019/12/06 21:41:51 by jcobaled          #+#    #+#             */
+/*   Updated: 2019/12/06 22:25:05 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int		atoi(const char *str)
 {
-	unsigned char		*d;
-	unsigned const char	*s;
-
-	d = (unsigned char*)dst;
-	s = (unsigned char*)src;
-	if (src < dst)
-	{
-		while (len--)
-		{
-			d[len] = s[len];
-		}
-	}
-	else
-		ft_memcpy(dst, src, len);
-	return (dst);
+	
 }

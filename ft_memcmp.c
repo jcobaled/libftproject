@@ -6,7 +6,7 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 00:00:11 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/01 09:23:59 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/12/06 13:01:33 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char 	*str1;
-	unsigned char 	*str2;
+	unsigned char	*str1;
+	unsigned char	*str2;
 	size_t			i;
 
 	str1 = (unsigned char*)s1;

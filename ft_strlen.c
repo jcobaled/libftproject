@@ -6,7 +6,7 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 00:40:22 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/01 12:21:06 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/12/06 13:06:49 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 size_t	ft_strlen(const char *s)
 {
 	size_t	len;
-	
+
 	len = 0;
-	while (s[len] !='\0')
+	while (s[len] != '\0')
 		len++;
 	return (len);
 }
