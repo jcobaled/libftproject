@@ -6,7 +6,7 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 18:18:21 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/06 23:00:49 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/12/06 23:27:55 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ size_t  ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 
 #endif
