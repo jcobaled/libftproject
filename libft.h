@@ -6,13 +6,14 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 18:18:21 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/06 21:55:40 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/12/06 23:00:49 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+# include <stdlib.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -37,5 +38,6 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize);
 size_t  ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
+void	*ft_calloc(size_t count, size_t size);
 
 #endif
