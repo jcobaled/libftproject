@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   main_strtrim.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/02 22:41:09 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/09 23:19:30 by jcobaled         ###   ########.fr       */
+/*   Created: 2019/12/09 18:45:34 by jcobaled          #+#    #+#             */
+/*   Updated: 2019/12/09 19:35:45 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+char	*ft_strtrim(char const *s1, char const *set);
+
+int		main(void)
 {
-	size_t len;
-
-	if (dst == 0 || src == 0)
-		return (0);
-	len = 0;
-	while (src[len] != '\0' && dstsize > 1)
-	{
-		dst[len] = src[len];
-		len++;
-		dstsize--;
-	}
-	if (dstsize != 0)
-		dst[len] = '\0';
-	return (ft_strlen(src));
+	char s1[]="calderilladfcmnop";
+	char set[]="almozxf";
+	printf("%s\n", ft_strtrim(s1, set));
+	return (0);
 }

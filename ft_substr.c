@@ -6,7 +6,7 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 10:36:57 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/09 13:11:23 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/12/09 16:12:35 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len == 0 || ft_strlen(s) < start)
 		return (ft_strdup(""));
 	i = 0;
- 	while (s[start + i] != '\0' && i < len)
+	while (s[start + i] != '\0' && i < len)
 	{
 		str[i] = s[start + i];
 		i++;

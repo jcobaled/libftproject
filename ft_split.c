@@ -1,39 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/08 13:42:24 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/09 16:15:52 by jcobaled         ###   ########.fr       */
+/*   Created: 2019/12/09 20:57:12 by jcobaled          #+#    #+#             */
+/*   Updated: 2019/12/10 20:07:06 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	**ft_split(char const *s, char c)
 {
-	size_t	size;
-	char	*str;
-	size_t	i;
-	size_t	j;
+	char	**hajduk;
+	int		count;
+	int		i;
+	int		j;
 
-	if (s1 == 0 || s2 == 0)
-		return (NULL);
-	size = ft_strlen(s1) + ft_strlen(s2);
-	str = (char *)malloc(sizeof(char) * (size + 1));
-	if (str == 0)
+	count = 0;
+	while (s)
+	{
+		if (*s == c)
+			count++;
+		s++;
+	}
+	count++;
+	hajduk = (char **)malloc(count  * sizeof(char *) + 1);
+	if (hajduk == 0)
 		return (NULL);
 	i = 0;
-	while (s1[i] != '\0')
-	{
-		str[i] = s1[i];
-		i++;
+	while (count >= 0)
+	{	
+		j = 0;
+		while (s!='\0')
+		{
+			if (s[j] != c)
+			{
+				hajduk[i][j] = s[j];
+				j++;
+			}
+			else
+				i++;
+		}
+		count --;
 	}
-	j = 0;
-	while (s2[j] != '\0')
-		str[i++] = s2[j++];
-	str[i] = '\0';
-	return (str);
+	hajduk[++i][0] = '\0';
+	return (hajduk);
 }
