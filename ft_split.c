@@ -6,46 +6,73 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 20:57:12 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/10 20:07:06 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/12/12 22:24:49 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	**ft_split(char const *s, char c)
+static int	counter(char const *s, char c)
 {
-	char	**hajduk;
-	int		count;
-	int		i;
-	int		j;
+	int	count;
+	int		k;
 
 	count = 0;
-	while (s)
+	k = 0;
+	while (s[k] != '\0')
 	{
-		if (*s == c)
+		if (s[k] != c)
+		{	
 			count++;
-		s++;
+			while (s[k] != c && s[k] != '\0')
+				k++;
+		}
+		if (s[k] != '\0') 
+			k++;
 	}
-	count++;
-	hajduk = (char **)malloc(count  * sizeof(char *) + 1);
-	if (hajduk == 0)
+	return (count);
+}
+
+char		**ft_split(char const *s, char c)
+{
+	char	**plit;
+	size_t	i;
+	size_t	j;
+	int		z;
+
+	if (!s || !(plit = (char **)(ft_calloc(counter(s, c) + 1, sizeof(char *)))))
 		return (NULL);
 	i = 0;
-	while (count >= 0)
-	{	
-		j = 0;
-		while (s!='\0')
+	j = 0;
+	z = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
 		{
-			if (s[j] != c)
-			{
-				hajduk[i][j] = s[j];
-				j++;
-			}
-			else
+			j = i;
+			while (s[i] != c && s[i])
 				i++;
+			plit[z++] = ft_substr(s, j, i - j);
 		}
-		count --;
+		if (s[i] != '\0')
+			i++;
 	}
-	hajduk[++i][0] = '\0';
-	return (hajduk);
+	return (plit);
 }
+
+/*int 	main(void)
+{
+	char s[] = " loremipsum   dolor ";
+	char **hajduk;
+
+	int i;
+	i = 0;
+	hajduk = ft_split(s, ' ');
+	while (hajduk[i])
+	{
+		printf("%s\n", hajduk[i]);
+		i++;
+	}
+	return (0);
+}*/
