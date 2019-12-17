@@ -6,7 +6,7 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/14 19:38:12 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/14 19:47:50 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/12/15 13:13:42 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int		i;
 
 	i = 0;
-	if(s)
+	if (s)
 	{
 		while (s[i] != 0)
 		{

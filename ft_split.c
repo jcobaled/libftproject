@@ -6,7 +6,7 @@
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 20:57:12 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/12 22:24:49 by jcobaled         ###   ########.fr       */
+/*   Updated: 2019/12/15 13:12:47 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	counter(char const *s, char c)
 {
-	int	count;
+	int		count;
 	int		k;
 
 	count = 0;
@@ -23,12 +23,12 @@ static int	counter(char const *s, char c)
 	while (s[k] != '\0')
 	{
 		if (s[k] != c)
-		{	
+		{
 			count++;
 			while (s[k] != c && s[k] != '\0')
 				k++;
 		}
-		if (s[k] != '\0') 
+		if (s[k] != '\0')
 			k++;
 	}
 	return (count);
@@ -60,19 +60,3 @@ char		**ft_split(char const *s, char c)
 	}
 	return (plit);
 }
-
-/*int 	main(void)
-{
-	char s[] = " loremipsum   dolor ";
-	char **hajduk;
-
-	int i;
-	i = 0;
-	hajduk = ft_split(s, ' ');
-	while (hajduk[i])
-	{
-		printf("%s\n", hajduk[i]);
-		i++;
-	}
-	return (0);
-}*/

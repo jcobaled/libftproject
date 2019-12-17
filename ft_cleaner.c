@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_cleaner.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcobaled <jcobaled@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/08 21:12:30 by jcobaled          #+#    #+#             */
-/*   Updated: 2019/12/09 19:54:05 by jcobaled         ###   ########.fr       */
+/*   Created: 2019/12/15 13:27:11 by jcobaled          #+#    #+#             */
+/*   Updated: 2019/12/15 13:27:27 by jcobaled         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,20 +50,3 @@ char	*ft_cleaner(char const *s1, char const *set)
 	dst[k] = '\0';
 	return (dst);
 }
-	
-/*Parámetros
-#1. La cadena de caracteres que hay que depurar.
-#2. El set de referencia de caracteres que hay que
-retirar.
-Valor de retorno
-La cadena de caracteres depurada. NULL si falla la
-reserva de memoria.
-Funciones exter- nas autorizadas
-malloc
-Descripción
-Reserva memoria (con malloc(3)) para la cadena de
-caracteres que va a devolver, que es una copia
-de la cadena de caracteres pasada como argumento,
-sin los caracteres indicados en el set pasado como
-argumento al principio y al final de la cadena de
-caracteres.*/
